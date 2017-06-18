@@ -1,0 +1,317 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+
+body {
+  background-color: #07889B;
+  font-family: "Didact Gothic";
+  color: white;
+  /*overflow:hidden; */
+}
+
+#errorms{
+  position:absolute;
+  background:rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  z-index:1;
+  font-size:3em;
+  left:-6px;
+  padding:100px 15px;
+  border-radius:5px;
+  top:-130px;
+
+}
+
+
+header {
+  background-color: #E37222;
+  padding: 30px 30px 60px 30px;
+  margin: -30px -20px 0 -20px;
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px teal;
+
+}
+
+.container {
+ /* height: 100%;
+  display: flex;
+  justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.totheleft {
+  float: left;
+}
+
+.totheright {
+  float: right;
+}
+
+#question {
+  font-size: 40px;
+  text-shadow: 2px 4px teal;
+ text-align:center;
+margin-bottom:20px;
+}
+
+ul {
+margin-top:20px;
+  list-style-type: none;
+margin-left:-30px;
+
+
+}
+
+ul li div {
+  background-color: #E37222;
+  margin-bottom:10px;
+  text-align:center;
+  padding:18px 5px;
+  font-size:2em;
+  box-shadow: 2px 4px #057687;
+  text-shadow: 1px 2px teal;
+border-radius:3px;
+
+
+}
+
+ul li div:active{
+    box-shadow: 1px 2px #057687;   
+    background-color: #D1691F;
+}
+
+
+</style>
+</head>
+<body><div class="container-fluid">
+<header><span class="totheleft" id="cstracker">CS:<b>0</b></span><span class="totheright" id="pbtracker">PB:<b>0</b></span></header>
+
+
+
+<div class="container">
+<div id="question">Кой написва &quot;Под Игото?&quot;</div>
+
+<div class="col-xs-12" div="" id="answerbox">
+<div id="errorms"></div>
+<ul>
+        <li>
+          <div id=yeah1 onclick="klik('1')"></div>
+        </li>
+        <li>
+          <div id=yeah2 onclick="klik('2')"></div>
+        </li>
+        <li>
+          <div id=yeah3 onclick="klik('3')"></div>
+        </li>
+        <li>
+          <div id=yeah4 onclick="klik('4')"></div>
+        </li>
+</ul>
+</div>
+</div>
+</div>
+<script>var proizvgeroi={"Чичовци":["Иван Селамсъзът","Варлаам Копринарката"],"Под игото":["Бойчо Огнянов","Рада Госпожина","Соколов","чорбаджи Марко","Мичо Бейзадето","Кириак Стефчов","чорбаджи Йордан Диамандиев","Хаджи Ровоама"]}
+proizvgeroi["Бай Ганьо"]=["Бай Ганьо","Дочоолу","Гочоолу","Иваница Граматиков"]
+proizvgeroi["Ветрената мелница"]=["Христина","Лазар Дъбака","дядо Корчан"]
+proizvgeroi["Косачи"]=["Лазо","Благолаж"]
+proizvgeroi["Мечтатели"]=["Рустем","Акима"]
+proizvgeroi["Задушница"]=["Станчо","Стоилка"]
+proizvgeroi["На оня свят"]=["Дядо Матейко"]
+proizvgeroi["Гераците"]=["Йордан Герака","Баба Марга","Божан","Петър","Павел","Йовка","Елка","Захаринчо","Матей Маргалака"]
+proizvgeroi["Последна радост"]=["Люцкан","Цветана","Инженера"]
+proizvgeroi["Шибил"]=["Шибил","Рада","Велико кехая"]
+proizvgeroi["През чумавото"]=["Тиха","хаджи Драган","Величко"]
+proizvgeroi["Индже"]=["Индже","Пауна","Найден Гърбавото","Сяро Барутчията"]
+proizvgeroi["Песента на колелетата"]=["Сали Яшар","Джапар","Шакире"]
+proizvgeroi["Албена"]=["Албена","Куцар","Нягул"]
+proizvgeroi["Другоселец"]=["другоселецът","Торашко"]
+proizvgeroi["Серафим"]=["Серафим","Павлина","Еньо"]
+proizvgeroi["Тютюн"]=["Борис Морев","Ирина","Мария","татко Пиер","Костов","фон Гайер","Шишко","Варвара"]
+proizvgeroi["Железният светилник"]=["Стоян Глаушев","Султана","Кочо","Лазар","Катерина","Климент Бенков","Рафе Клинче","Ния","Аврам Немтур","Божана","Андрей"]
+
+var proizvavtori={}
+proizvavtori["Христо Ботев"]=["Майце си","Към брата си","Елегия","Борба","До моето първо либе","На прощаване","Хаджи Димитър","Моята молитва","Обесването на Васил Левски"]
+proizvavtori["Иван Вазов"]=["Българският език", "Отечество любезно", "При Рилския манастир","Елате ни вижте", "Линее нашто поколение","Опълченците на Шипка","Дядо Йоцо гледа","Чичовци","Под игото"]
+proizvavtori["Алеко Константинов"]=['Бай Ганьо',"Разни хора, разни идеали"]
+proizvavtori["Пенчо Славейков"]=["Cis moll", "Ни лъх не дъхва над полени", "Спи езерото; белостволи буки", "Самотен гроб в самотен кът", "Ралица"]
+proizvavtori["Пейо Яворов"]=["Градушка", "Заточеници", "Ще бъдеш в бяло", "Две хубави очи","Стон", "Две души", "Сенки", "Песента на човека", "Маска"]
+proizvavtori["Елин Пелин"]=["Ветрената мелница", "Косачи", "Задушница", "Мечтатели", "На оня свят", "Андрешко", "Чорба от греховете на отец Никодим", "Занемелите камбани","Гераците"]
+proizvavtori["Димчо Дебелянов"]=["Черна песен", "Пловдив", "Да се завърнеш…", "Помниш ли, помниш ли..", "Спи градът", "Миг", "Един убит", "Сиротна песен", "Тиха победа"]
+proizvavtori["Христо Смирненски"]=["Да бъде ден!", "Ний", "Йохан", "Юноша", "Стария музикант","Цветарка", "Зимни вечери"]
+proizvavtori["Гео Милев"]=["Септември"]
+proizvavtori["Атанас Далчев"]=["Прозорец", "Болница", "Стаята", "Къщата", "Повест", "Книгите","Камък", "Дяволско"]
+proizvavtori["Елисавета Багряна"]=["Кукувица", "Стихии", "Потомка", "Вечната"]
+proizvavtori["Йордан Йовков"]=["Песента на колелетата", "Последна радост", "Шибил", "През чумавото", "Индже", "Албена", "Другоселец", "Серафим"]
+proizvavtori["Никола Вапцаров"]=["Вяра", "Писмо", "Песен за човека", "Сън","История", "Завод", "Кино", "Прощално", "Борбата е безмилостно жестока…"]
+proizvavtori["Димитър Талев"]=["Железният светилник"]
+proizvavtori["Димитър Димов"]=["Тютюн"]
+
+//to si ebalo mamata ot rechnici. tva ^ ne go gledai
+
+var vsichkiavtori=Object.keys(proizvavtori);
+var vsichkiproizv=[];
+for (var i in proizvavtori){
+    vsichkiproizv=vsichkiproizv.concat(proizvavtori[i]);
+};
+
+var vsichkigeroi=[];
+for (var i in proizvgeroi){
+	vsichkigeroi=vsichkigeroi.concat(proizvgeroi[i]);
+};
+
+//time to get dirty
+var rightanswer,quest,n,randi,str1="yeah",str2,goodid,tuktursi=[],cs=0,pb=0,clicked,choice;
+
+
+function poznaiavtorproizv(){
+  quest=vsichkiproizv[Math.floor(Math.random()*vsichkiproizv.length)];
+  for(var t in proizvavtori){
+    if (proizvavtori[t].indexOf(quest)!=-1){
+      rightanswer=t;
+    }
+  }
+  document.getElementById("question").innerHTML='Кой написва "'+ quest+'"?';
+ tuktursi=vsichkiavtori.slice()
+    tuktursi.splice(vsichkiavtori.indexOf(rightanswer),1);
+}
+
+function poznaiproizvgeroi(){
+	quest=vsichkigeroi[Math.floor(Math.random()*vsichkigeroi.length)]
+  for(var t in proizvgeroi){
+  if (proizvgeroi[t].indexOf(quest)!=-1){
+      rightanswer=t;
+    }
+  }
+  document.getElementById("question").innerHTML="Откъде е "+ quest+"?";
+  tuktursi=vsichkiproizv
+    tuktursi.splice(vsichkiproizv.indexOf(rightanswer),1);
+}
+
+function poznaiavtorgeroi(){
+	quest=vsichkigeroi[Math.floor(Math.random()*vsichkigeroi.length)]
+  for(var t in proizvgeroi){
+  if (proizvgeroi[t].indexOf(quest)!=-1){
+      var rightanswer1=t;
+    }
+    for(var t in proizvavtori){
+    if (proizvavtori[t].indexOf(rightanswer1)!=-1){
+      rightanswer=t;
+    }
+  }
+}
+  document.getElementById("question").innerHTML="Чий герой е "+ quest+"?";
+  tuktursi=vsichkiavtori.slice()
+    tuktursi.splice(vsichkiavtori.indexOf(rightanswer),1);
+}
+
+function start(n){
+  if (n==1){
+    poznaiavtorproizv();
+    
+    
+  }
+  if (n==2){
+    poznaiproizvgeroi();
+    
+  }
+  if (n==3){
+    poznaiavtorgeroi();
+    
+  }
+  
+  randi=Math.floor(Math.random()*4+1);
+  str2=String(randi);
+  goodid=str1.concat(str2);
+  
+  document.getElementById(goodid).innerHTML=rightanswer;
+  
+  for(var i=1;i<5;i++){
+    if (i!=randi){
+     choice= tuktursi[Math.floor(Math.random()*tuktursi.length)];
+tuktursi.splice(tuktursi.indexOf(choice),1);
+     document.getElementById("yeah"+String(i)).innerHTML=choice;
+    }
+  }
+  tuktursi=[]
+  choice=""
+}
+
+function klik(clicked){
+  if (document.getElementById("yeah"+clicked).innerHTML==rightanswer){
+    cs+=1
+    if (cs>pb){
+      pb+=1;
+    }}
+ else{
+    cs=0;
+      document.getElementById("errorms").innerHTML="Грешка! <br><br> Отговорът е " +rightanswer;
+   $("#errorms").fadeToggle(100);
+   setTimeout(function(){$("#errorms").fadeToggle(300);},750);
+   
+   
+  }
+  document.getElementById("cstracker").innerHTML="CS: "+ cs;
+  document.getElementById("pbtracker").innerHTML="PB: "+ pb;
+  setCookie("bisi40",[cs,pb],7);
+
+  setTimeout(function(){start(Math.floor(Math.random()*3+1))},30)
+  document.getElementById("cstracker").innerHTML="CS: <b>"+ cs+"</b>";
+  document.getElementById("pbtracker").innerHTML="PB: <b>"+ pb+"</b>";
+
+  }
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + String(cvalue) + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(";");
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) === 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  var oldcookies = getCookie("bisi40").split(",");
+  if (getCookie("bisi40")) {
+      cs=oldcookies[0];
+      pb=oldcookies[1];
+    }
+  else{
+    cs=0;
+    pb=0;
+  }
+  }
+
+checkCookie();
+document.getElementById("cstracker").innerHTML="CS: "+ cs;
+ document.getElementById("pbtracker").innerHTML="PB: "+ pb;
+$("#errorms").hide();
+
+start(Math.floor(Math.random()*3+1));
+    
+</script>
+</body>
+</html>		
