@@ -12,6 +12,16 @@ body {
   background-color: #07889B;
   font-family: "Didact Gothic";
   color: white;
+  /*overflow:hidden; */
+}
+
+#credit{
+position:absolute;
+color:white;
+font-size:10px;
+top:620px;
+
+
 }
 
 #errorms{
@@ -98,7 +108,7 @@ ul li div:active{
 <header><span class="totheleft" id="cstracker">CS:<b>0</b></span><span class="totheright" id="pbtracker">PB:<b>0</b></span></header>
 
 
-
+<a href="/" id=credit>Bistra Chilikova</a>
 <div class="container">
 <div id="question">Кой написва &quot;Под Игото?&quot;</div>
 
@@ -263,7 +273,7 @@ function klik(clicked){
   }
   document.getElementById("cstracker").innerHTML="CS: "+ cs;
   document.getElementById("pbtracker").innerHTML="PB: "+ pb;
-  setCookie("bisi40",[cs,pb],7);
+  setCookie("bisi40",pb,7);
 
   setTimeout(function(){start(Math.floor(Math.random()*3+1))},30)
   document.getElementById("cstracker").innerHTML="CS: <b>"+ cs+"</b>";
@@ -294,10 +304,10 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-  var oldcookies = getCookie("bisi40").split(",");
+  var oldcookies = getCookie("bisi40");
   if (getCookie("bisi40")) {
-      cs=oldcookies[0];
-      pb=oldcookies[1];
+      cs=0;
+      pb=Number(oldcookies);
     }
   else{
     cs=0;
@@ -314,4 +324,4 @@ start(Math.floor(Math.random()*3+1));
     
 </script>
 </body>
-</html>		
+</html>				
