@@ -304,10 +304,10 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-  var oldcookies = getCookie("bisi40").split(",");
+  var oldcookies = getCookie("bisi40");
   if (getCookie("bisi40")) {
       cs=0;
-      pb=Number(oldcookies[1]);
+      pb=Number(oldcookies);
     }
   else{
     cs=0;
