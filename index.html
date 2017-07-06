@@ -5,7 +5,9 @@
 <style>
 
 body {
-  background-color: #07889B;
+  --main:#08302f;
+  --buton:#0f8044;
+  background-color: var(--main);
   font-family: "Didact Gothic";
   color: white;
   /*overflow:hidden; */
@@ -38,19 +40,16 @@ top:620px;
 
 
 header {
-  background-color: #E37222;
-  padding: 30px 30px 60px 30px;
-  margin: -30px -20px 0 -20px;
-  font-size: 40px;
+  background-color: var(--buton);
+  padding: 30px 10px 45px 30px;
+  margin: -30px -8px 0 -30px;
+  font-size: 2em;
   color: white;
-  text-shadow: 2px 2px teal;
+  text-shadow: 2px 2px var(--main);
 
 }
 
 .container {
- /* height: 100%;
-  display: flex;
-  justify-content: center; */
   align-items: center;
   flex-direction: column;
   margin-top: 30px;
@@ -66,7 +65,7 @@ header {
 
 #question {
   font-size: 40px;
-  text-shadow: 2px 4px teal;
+  text-shadow: 1px 1px #0f8044;
  text-align:center;
 margin-bottom:20px;
 }
@@ -74,19 +73,19 @@ margin-bottom:20px;
 ul {
 margin-top:20px;
   list-style-type: none;
-margin-left:-30px;
+margin-left:-40px;
 
 
 }
 
 ul li div {
-  background-color: #E37222;
+  background-color: var(--buton);
   margin-bottom:10px;
   text-align:center;
   padding:18px 5px;
   font-size:2em;
-  box-shadow: 2px 4px #057687;
-  text-shadow: 1px 2px teal;
+  box-shadow: 2px 4px rgba(0,0,0,0.2);
+  text-shadow: 1px 2px #08302f;
 border-radius:3px;
 
 
@@ -94,7 +93,7 @@ border-radius:3px;
 
 ul li div:active{
     box-shadow: 1px 2px #057687;   
-    background-color: #D1691F;
+    background-color: #16c065;
 }
 
 
