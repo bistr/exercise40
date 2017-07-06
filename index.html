@@ -101,7 +101,7 @@ ul li div:active{
 </style>
 </head>
 <body><div class="container-fluid">
-<header><span class="totheleft" id="cstracker">CS:<b>0</b></span><span class="totheright" id="pbtracker">PB:<b>0</b></span></header>
+<header><span class="totheleft" id="cstracker">Score:<b>0</b></span><span class="totheright" id="pbtracker">Best:<b>0</b></span></header>
 
 
 <a href="/" id=credit>Bistra Chilikova</a>
@@ -269,13 +269,14 @@ function klik(clicked){
    
    
   }
-  document.getElementById("cstracker").innerHTML="CS: "+ cs;
-  document.getElementById("pbtracker").innerHTML="PB: "+ pb;
+  document.getElementById("cstracker").innerHTML="Score: <b>"+ cs+"</b>";
+  document.getElementById("pbtracker").innerHTML="Best: <b>"+ pb+"</b>";
+
   localStorage.setItem("pb",pb)
 
   setTimeout(function(){start(Math.floor(Math.random()*3+1))},30)
-  document.getElementById("cstracker").innerHTML="CS: <b>"+ cs+"</b>";
-  document.getElementById("pbtracker").innerHTML="PB: <b>"+ pb+"</b>";
+  document.getElementById("cstracker").innerHTML="Score: <b>"+ cs+"</b>";
+  document.getElementById("pbtracker").innerHTML="Best: <b>"+ pb+"</b>";
 
   }
 
@@ -283,8 +284,9 @@ if (localStorage.getItem("pb")){
 	pb=parseInt(localStorage.getItem("pb"))
 }
 	
-document.getElementById("cstracker").innerHTML="CS: "+ cs;
- document.getElementById("pbtracker").innerHTML="PB: "+ pb;
+  document.getElementById("cstracker").innerHTML="Score: <b>"+ cs+"</b>";
+  document.getElementById("pbtracker").innerHTML="Best: <b>"+ pb+"</b>";
+
 $("#errorms").hide();
 
 start(Math.floor(Math.random()*3+1));
