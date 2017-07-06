@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.phonegap.forty"
+        versionCode = "1" 
+        version     = "1.0.0" >
+ 
+    <!-- versionCode is Android only -->
+    <!-- version is in major.minor.patch format --> 
+    <name>Forty</name>
+ 
+    <description>
+        Test your knowledge in Bulgarian literature. 
+    </description>
+ 
+    <author href="http://www.bistrachilikova.byethost32.com" email="bistra.chilikova@abv.bg">
+        Name Of The Author
+    </author>
+
+     <splash src="splash.png" />
+     <icon src="icon.png" />
+ 
+</widget>
