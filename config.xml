@@ -24,14 +24,14 @@
 <splash src="splash.png" />
 
 
-<splash gap:platform="android" gap:qualifier="land-hdpi" src="screen-hdpi-landscape.png" />
-<splash gap:platform="android" gap:qualifier="land-ldpi" src="screen-ldpi-landscape.png" />
-<splash gap:platform="android" gap:qualifier="land-mdpi" src="screen-mdpi-landscape.png" />
-<splash gap:platform="android" gap:qualifier="land-xhdpi" src="screen-xhdpi-landscape.png" />
-<splash gap:platform="android" gap:qualifier="port-hdpi" src="screen-hdpi-portrait.png" />
-<splash gap:platform="android" gap:qualifier="port-ldpi" src="screen-ldpi-portrait.png" />
-<splash gap:platform="android" gap:qualifier="port-mdpi" src="screen-mdpi-portrait.png" />
-<splash gap:platform="android" gap:qualifier="port-xhdpi" src="screen-xhdpi-portrait.png" />
+<splash platform="android" qualifier="land-hdpi" src="screen-hdpi-landscape.png" />
+<splash platform="android" qualifier="land-ldpi" src="screen-ldpi-landscape.png" />
+<splash platform="android" qualifier="land-mdpi" src="screen-mdpi-landscape.png" />
+<splash platform="android" qualifier="land-xhdpi" src="screen-xhdpi-landscape.png" />
+<splash platform="android" qualifier="port-hdpi" src="screen-hdpi-portrait.png" />
+<splash platform="android" qualifier="port-ldpi" src="screen-ldpi-portrait.png" />
+<splash platform="android" qualifier="port-mdpi" src="screen-mdpi-portrait.png" />
+<splash platform="android" qualifier="port-xhdpi" src="screen-xhdpi-portrait.png" />
 
 
  
