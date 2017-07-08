@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.phonegap.forty"
@@ -17,18 +17,21 @@
         Name Of The Author
     </author>
 
-      <splash src="splash.png" platform="android" />
+
      <icon src="icon.png" />       
         
         
-    <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="3000" />
-<preference name="AutoHideSplashScreen" value="true"/>
-<preference name="SplashShowOnlyFirstTime" value="false"/>
-<preference name="ShowSplashScreenSpinner" value="false"/>
-<preference name="FadeSplashScreen" value="false"/>
+<splash src="splash.png" />
 
 
+<splash gap:platform="android" gap:qualifier="land-hdpi" src="screen-hdpi-landscape.png" />
+<splash gap:platform="android" gap:qualifier="land-ldpi" src="screen-ldpi-landscape.png" />
+<splash gap:platform="android" gap:qualifier="land-mdpi" src="screen-mdpi-landscape.png" />
+<splash gap:platform="android" gap:qualifier="land-xhdpi" src="screen-xhdpi-landscape.png" />
+<splash gap:platform="android" gap:qualifier="port-hdpi" src="screen-hdpi-portrait.png" />
+<splash gap:platform="android" gap:qualifier="port-ldpi" src="screen-ldpi-portrait.png" />
+<splash gap:platform="android" gap:qualifier="port-mdpi" src="screen-mdpi-portrait.png" />
+<splash gap:platform="android" gap:qualifier="port-xhdpi" src="screen-xhdpi-portrait.png" />
 
 
  
