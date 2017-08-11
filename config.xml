@@ -1,37 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.phonegap.forty"
+        id          = "com.phonegap.palnoshes"
         versionCode = "1" 
         version     = "1.0.0" >
+        
+        
+       <preference name="permissions" value="none" />
+       <preference name="SplashScreen" value="splash" /> 
+       <preference name="SplashScreenDelay" value="4000" />
+       <gap:plugin name="cordova-plugin-splashscreen" version="3.1.0" source="npm" /> 
  
     <!-- versionCode is Android only -->
     <!-- version is in major.minor.patch format --> 
-    <name>Forty</name>
+    <name>Palno 6es</name>
  
     <description>
         Test your knowledge in Bulgarian literature. 
     </description>
  
     <author href="http://www.bistrachilikova.byethost32.com" email="bistra.chilikova@abv.bg">
-        Name Of The Author
+        Bistra Chilikova
     </author>
 
 
-     <icon src="icon.png" />       
-        
+     <icon src="icon.png" />    
         
 <splash src="splash.png" />
 
-
-<splash platform="android" qualifier="land-hdpi" src="screen-hdpi-landscape.png" />
-<splash platform="android" qualifier="land-ldpi" src="screen-ldpi-landscape.png" />
-<splash platform="android" qualifier="land-mdpi" src="screen-mdpi-landscape.png" />
-<splash platform="android" qualifier="land-xhdpi" src="screen-xhdpi-landscape.png" />
-<splash platform="android" qualifier="port-hdpi" src="screen-hdpi-portrait.png" />
-<splash platform="android" qualifier="port-ldpi" src="screen-ldpi-portrait.png" />
-<splash platform="android" qualifier="port-mdpi" src="screen-mdpi-portrait.png" />
-<splash platform="android" qualifier="port-xhdpi" src="screen-xhdpi-portrait.png" />
 
 
  
