@@ -1,2 +1,2 @@
-# FORTY
-An app for testing your knowledge in Bulgarian literature.
+# PALNO 6ES
+Let's face it - literature is impossible.
