@@ -17,18 +17,20 @@ body {
 }
 
 #errorms{
-  position:absolute;
+ position:fixed;
    background:rgba(0,0,0,0.9);
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align:center;
-   z-index:1;
-   font-size:3em;
-  left:-6px;
-  padding:100px 15px 200px 15px;
-  border-radius:5px;
-  top:80px;
+  left:0;
+  right:0;
+  bottom:0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  z-index:1;
+  font-size:3em;
+  top:54px;
+  width:100vw;
+  flex-direction:column;
 	}
 
 
@@ -279,7 +281,7 @@ function klik(clicked){
     }}
  else{
     cs=0;
-      document.getElementById("errorms").innerHTML="Грешка! <br><br> Отговорът е " +rightanswer;
+      document.getElementById("errorms").innerHTML="document.getElementById("errorms").innerHTML="<span>Грешка! <br> Отговорът е </span><br><span style='font-size:1.3em'><b>" +rightanswer +"</b></span" ;
 //   $("#errorms").fadeToggle(100);
 //   setTimeout(function(){$("#errorms").fadeToggle(300);},750);
 	 $("#errorms").show("slow");
