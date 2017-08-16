@@ -572,9 +572,7 @@ var hiscore1 = parseInt(JSON.parse(localStorage.getItem("1"))[1]);
       document.getElementById("showhim").innerText = rightanswer;
   //   setTimeout(function(){$("#errorms").fadeToggle(300);},750);
  
-
      $("#errorms").show();
-   setTimeout(function(){$("#errorms").innerHTML="";},500);
   setTimeout(function() {
     $("#errorms").hide();
         if (cs>=hiscore3){
@@ -624,14 +622,17 @@ var hiscore1 = parseInt(JSON.parse(localStorage.getItem("1"))[1]);
         }
   fillcard(cs);
   cs = 0;
+$("#errorms").hide(); 
 $("#endgame").show();
-          setTimeout(function(){
-            
-          })
-              setTimeout(function() {
-    $("#endgame").hide();
-  }, 5000);
-        }, 1500);
+var count=document.getElementById("part2");
+count.innerText="Играй след 5...";
+setTimeout(function(){count.innerText="Играй след 4..."},1000);
+setTimeout(function(){count.innerText="Играй след 3..."},2000);
+setTimeout(function(){count.innerText="Играй след 2..."},3000);
+setTimeout(function(){count.innerText="Играй след 1..."},4000);
+setTimeout(function(){$("#endgame").hide()},5200)
+        
+  }, 1500);
 
 
   
