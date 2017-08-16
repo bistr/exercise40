@@ -17,7 +17,7 @@ body {
 }
 
 #errorms{
- position:fixed;
+  position:fixed;
    background:rgba(0,0,0,0.9);
   left:0;
   right:0;
@@ -117,6 +117,150 @@ ul li div {
   #yeah4:active{
     background-color:#6C1296;
   }	
+	
+	
+#endgame{
+  position:absolute;
+  color:#382291;
+  background-color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+  font-size:2.5em;
+  z-index:5;
+  top:64px;
+  bottom:10px;
+  left:10px;
+  right:10px;
+  border-radius:20px;
+ 
+}
+
+#part1,#part2{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+#part1{
+  border-radius:20px 20px 0 0;
+  position:fixed;
+  left:10px;
+  top:10px;
+  right:10px;
+  color:white;
+  background-color:#11BB66;
+  height:46%;
+}
+
+#score{
+  font-size:2em;
+}
+
+#part2{
+  background-color:#3377BB;
+  position:fixed;
+  top:46%;
+  color:white;
+  left:10px;
+  right:10px;
+  height:7%;
+  font-size:0.8em;
+}
+
+#part3{
+  background-color:#11AABB;
+  height:46%;
+  bottom:10px;
+  position:fixed;
+  left:10px;
+  right:10px;
+  border-radius:0 0 10px 10px;
+  color:white;
+  display:flex;
+  flex-direction:row;
+  
+}
+
+
+
+.hisc{
+  font-size:1.3em;
+  text-shadow:0px 0px 8px rgba(255,255,255,0.5);
+  margin-bottom:-1vh;
+}
+
+#step1,#step2,#step3{
+  margin:5px;
+  border-radius:5px;
+  width:30vw;
+  font-size:0.8em;
+  text-align:center;
+  vertical-align:middle;
+  border-radius:7px 7px 2px 2px;
+
+  
+}
+
+#gold,#silver,#bronze{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:fixed;
+  bottom:13%;
+  text-shadow:1px 1px 3px rgba(0,0,0,0.9);
+}
+
+#gold{
+  left:32vw;
+  right:32vw;
+  
+}
+
+#bronze{
+  right:3vw;
+}
+
+#silver{
+  left:3vw;
+}
+
+#step1{
+  background-color:#D4AF37;
+  height:18vh;
+  line-height:18vh;
+}
+
+#step2{
+  background-color:	#B8C2C2;
+  height:13vh;
+  line-height:13vh;
+}
+
+#step3{
+  background-color:#CD7F32;
+  height:8vh;
+  line-height:8vh;
+
+}
+
+#hof{
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  right:20px;
+  text-align:center;
+  letter-spacing: 0.3em;
+  background-color: #964B00;
+  border:7px solid #663300;
+  box-shadow:2px 2px 2px rgba(0,0,0,0.5);
+  font-size:0.7em;
+  
+}
+	
 
 </style>
 </head>
@@ -130,6 +274,29 @@ ul li div {
 
 <div id="answerbox">
 <div id="errorms"></div>
+
+        <div id="endgame">
+          <div id="part1">
+            <div> You scored </div>
+            <div id="score">64</div>
+            <div>points!</div>
+          </div>
+          <div id="part2">NEW GAME IN: 3</div>
+          <div id="part3">
+
+
+             
+              <div id=silver><div class="hisc" id="hisc2" style="font-size:1.5em">140</div><div id="step2">Ina</div></div>
+             <div id=gold>
+                <div class="hisc" id="hisc1" style="font-size:1.7em">216</div>
+                <div id="step1">Bistra</div>
+                   </div>
+              <div id=bronze><div class="hisc" id="hisc3" style="font-size:1.3em">54</div><div id="step3">Vladimira</div></div>
+            <div id="hof">HALL OF FAME</div>
+   
+
+            </div>
+            </div>
 <ul>
         <li>
           <div id=yeah1 onclick="klik('1')"></div>
@@ -147,169 +314,411 @@ ul li div {
 </div>
 </div>
 </div>
-<script>var proizvgeroi={"Чичовци":["Иван Селамсъзът","Варлаам Копринарката"],"Под игото":["Бойчо Огнянов","Рада Госпожина","Соколов","чорбаджи Марко","Мичо Бейзадето","Кириак Стефчов","чорбаджи Йордан Диамандиев","Хаджи Ровоама"]}
-proizvgeroi["Бай Ганьо"]=["Бай Ганьо","Дочоолу","Гочоолу","Иваница Граматиков"]
-proizvgeroi["Ветрената мелница"]=["Христина","Лазар Дъбака","дядо Корчан"]
-proizvgeroi["Косачи"]=["Лазо","Благолаж"]
-proizvgeroi["Мечтатели"]=["Рустем","Акима"]
-proizvgeroi["Задушница"]=["Станчо","Стоилка"]
-proizvgeroi["На оня свят"]=["Дядо Матейко"]
-proizvgeroi["Гераците"]=["Йордан Герака","Баба Марга","Божан","Петър","Павел","Йовка","Елка","Захаринчо","Матей Маргалака"]
-proizvgeroi["Последна радост"]=["Люцкан","Цветана","Инженера"]
-proizvgeroi["Шибил"]=["Шибил","Рада","Велико кехая"]
-proizvgeroi["През чумавото"]=["Тиха","хаджи Драган","Величко"]
-proizvgeroi["Индже"]=["Индже","Пауна","Найден Гърбавото","Сяро Барутчията"]
-proizvgeroi["Песента на колелетата"]=["Сали Яшар","Джапар","Шакире"]
-proizvgeroi["Албена"]=["Албена","Куцар","Нягул"]
-proizvgeroi["Другоселец"]=["другоселецът","Торашко"]
-proizvgeroi["Серафим"]=["Серафим","Павлина","Еньо"]
-proizvgeroi["Тютюн"]=["Борис Морев","Ирина","Мария","татко Пиер","Костов","фон Гайер","Шишко","Варвара"]
-proizvgeroi["Железният светилник"]=["Стоян Глаушев","Султана","Кочо","Лазар","Катерина","Климент Бенков","Рафе Клинче","Ния","Аврам Немтур","Божана","Андрей"]
-
-var proizvavtori={}
-proizvavtori["Христо Ботев"]=["Майце си","Към брата си","Елегия","Борба","До моето първо либе","На прощаване","Хаджи Димитър","Моята молитва","Обесването на Васил Левски"]
-proizvavtori["Иван Вазов"]=["Българският език", "Отечество любезно", "При Рилския манастир","Елате ни вижте", "Линее нашто поколение","Опълченците на Шипка","Дядо Йоцо гледа","Чичовци","Под игото"]
-proizvavtori["Алеко Константинов"]=['Бай Ганьо',"Разни хора, разни идеали"]
-proizvavtori["Пенчо Славейков"]=["Cis moll", "Ни лъх не дъхва над полени", "Спи езерото", "Самотен гроб в самотен кът", "Ралица"]
-proizvavtori["Пейо Яворов"]=["Градушка", "Заточеници", "Ще бъдеш в бяло", "Две хубави очи","Стон", "Две души", "Сенки", "Песента на човека", "Маска"]
-proizvavtori["Елин Пелин"]=["Ветрената мелница", "Косачи", "Задушница", "Мечтатели", "На оня свят", "Андрешко", "Чорба от греховете на отец Никодим", "Занемелите камбани","Гераците"]
-proizvavtori["Димчо Дебелянов"]=["Черна песен", "Пловдив", "Да се завърнеш…", "Помниш ли, помниш ли..", "Спи градът", "Миг", "Един убит", "Сиротна песен", "Тиха победа"]
-proizvavtori["Христо Смирненски"]=["Да бъде ден!", "Ний", "Йохан", "Юноша", "Стария музикант","Цветарка", "Зимни вечери"]
-proizvavtori["Гео Милев"]=["Септември"]
-proizvavtori["Атанас Далчев"]=["Прозорец", "Болница", "Стаята", "Къщата", "Повест", "Книгите","Камък", "Дяволско"]
-proizvavtori["Елисавета Багряна"]=["Кукувица", "Стихии", "Потомка", "Вечната"]
-proizvavtori["Йордан Йовков"]=["Песента на колелетата", "Последна радост", "Шибил", "През чумавото", "Индже", "Албена", "Другоселец", "Серафим"]
-proizvavtori["Никола Вапцаров"]=["Вяра", "Писмо", "Песен за човека", "Сън","История", "Завод", "Кино", "Прощално", "Борбата е безмилостно жестока…"]
-proizvavtori["Димитър Талев"]=["Железният светилник"]
-proizvavtori["Димитър Димов"]=["Тютюн"]
-
+<script>var proizvgeroi = {
+  Чичовци: ["Иван Селамсъзът", "Варлаам Копринарката"],
+  "Под игото": [
+    "Бойчо Огнянов",
+    "Рада Госпожина",
+    "Соколов",
+    "чорбаджи Марко",
+    "Мичо Бейзадето",
+    "Кириак Стефчов",
+    "чорбаджи Йордан Диамандиев",
+    "Хаджи Ровоама"
+  ]
+};
+proizvgeroi["Бай Ганьо"] = [
+  "Бай Ганьо",
+  "Дочоолу",
+  "Гочоолу",
+  "Иваница Граматиков"
+];
+proizvgeroi["Ветрената мелница"] = ["Христина", "Лазар Дъбака", "дядо Корчан"];
+proizvgeroi["Косачи"] = ["Лазо", "Благолаж"];
+proizvgeroi["Мечтатели"] = ["Рустем", "Акима"];
+proizvgeroi["Задушница"] = ["Станчо", "Стоилка"];
+proizvgeroi["На оня свят"] = ["Дядо Матейко"];
+proizvgeroi["Гераците"] = [
+  "Йордан Герака",
+  "Баба Марга",
+  "Божан",
+  "Петър",
+  "Павел",
+  "Йовка",
+  "Елка",
+  "Захаринчо",
+  "Матей Маргалака"
+];
+proizvgeroi["Последна радост"] = ["Люцкан", "Цветана", "Инженера"];
+proizvgeroi["Шибил"] = ["Шибил", "Рада", "Велико кехая"];
+proizvgeroi["През чумавото"] = ["Тиха", "хаджи Драган", "Величко"];
+proizvgeroi["Индже"] = [
+  "Индже",
+  "Пауна",
+  "Найден Гърбавото",
+  "Сяро Барутчията"
+];
+proizvgeroi["Песента на колелетата"] = ["Сали Яшар", "Джапар", "Шакире"];
+proizvgeroi["Албена"] = ["Албена", "Куцар", "Нягул"];
+proizvgeroi["Другоселец"] = ["другоселецът", "Торашко"];
+proizvgeroi["Серафим"] = ["Серафим", "Павлина", "Еньо"];
+proizvgeroi["Тютюн"] = [
+  "Борис Морев",
+  "Ирина",
+  "Мария",
+  "татко Пиер",
+  "Костов",
+  "фон Гайер",
+  "Шишко",
+  "Варвара"
+];
+proizvgeroi["Железният светилник"] = [
+  "Стоян Глаушев",
+  "Султана",
+  "Кочо",
+  "Лазар",
+  "Катерина",
+  "Климент Бенков",
+  "Рафе Клинче",
+  "Ния",
+  "Аврам Немтур",
+  "Божана",
+  "Андрей"
+];
+var proizvavtori = {};
+proizvavtori["Христо Ботев"] = [
+  "Майце си",
+  "Към брата си",
+  "Елегия",
+  "Борба",
+  "До моето първо либе",
+  "На прощаване",
+  "Хаджи Димитър",
+  "Моята молитва",
+  "Обесването на Васил Левски"
+];
+proizvavtori["Иван Вазов"] = [
+  "Българският език",
+  "Отечество любезно",
+  "При Рилския манастир",
+  "Елате ни вижте",
+  "Линее нашто поколение",
+  "Опълченците на Шипка",
+  "Дядо Йоцо гледа",
+  "Чичовци",
+  "Под игото"
+];
+proizvavtori["Алеко Константинов"] = ["Бай Ганьо", "Разни хора, разни идеали"];
+proizvavtori["Пенчо Славейков"] = [
+  "Cis moll",
+  "Ни лъх не дъхва над полени",
+  "Спи езерото; белостволи буки",
+  "Самотен гроб в самотен кът",
+  "Ралица"
+];
+proizvavtori["Пейо Яворов"] = [
+  "Градушка",
+  "Заточеници",
+  "Ще бъдеш в бяло",
+  "Две хубави очи",
+  "Стон",
+  "Две души",
+  "Сенки",
+  "Песента на човека",
+  "Маска"
+];
+proizvavtori["Елин Пелин"] = [
+  "Ветрената мелница",
+  "Косачи",
+  "Задушница",
+  "Мечтатели",
+  "На оня свят",
+  "Андрешко",
+  "Чорба от греховете на отец Никодим",
+  "Занемелите камбани",
+  "Гераците"
+];
+proizvavtori["Димчо Дебелянов"] = [
+  "Черна песен",
+  "Пловдив",
+  "Да се завърнеш…",
+  "Помниш ли, помниш ли..",
+  "Спи градът",
+  "Миг",
+  "Един убит",
+  "Сиротна песен",
+  "Тиха победа"
+];
+proizvavtori["Христо Смирненски"] = [
+  "Да бъде ден!",
+  "Ний",
+  "Йохан",
+  "Юноша",
+  "Стария музикант",
+  "Цветарка",
+  "Зимни вечери"
+];
+proizvavtori["Гео Милев"] = ["Септември"];
+proizvavtori["Атанас Далчев"] = [
+  "Прозорец",
+  "Болница",
+  "Стаята",
+  "Къщата",
+  "Повест",
+  "Книгите",
+  "Камък",
+  "Дяволско"
+];
+proizvavtori["Елисавета Багряна"] = [
+  "Кукувица",
+  "Стихии",
+  "Потомка",
+  "Вечната"
+];
+proizvavtori["Йордан Йовков"] = [
+  "Песента на колелетата",
+  "Последна радост",
+  "Шибил",
+  "През чумавото",
+  "Индже",
+  "Албена",
+  "Другоселец",
+  "Серафим"
+];
+proizvavtori["Никола Вапцаров"] = [
+  "Вяра",
+  "Писмо",
+  "Песен за човека",
+  "Сън",
+  "История",
+  "Завод",
+  "Кино",
+  "Прощално",
+  "Борбата е безмилостно жестока…"
+];
+proizvavtori["Димитър Талев"] = ["Железният светилник"];
+proizvavtori["Димитър Димов"] = ["Тютюн"];
 //to si ebalo mamata ot rechnici. tva ^ ne go gledai
-
-var vsichkiavtori=Object.keys(proizvavtori);
-var vsichkiproizv=[];
-for (var i in proizvavtori){
-    vsichkiproizv=vsichkiproizv.concat(proizvavtori[i]);
-};
-
-var vsichkigeroi=[];
-for (var i in proizvgeroi){
-	vsichkigeroi=vsichkigeroi.concat(proizvgeroi[i]);
-};
-
+var vsichkiavtori = Object.keys(proizvavtori);
+var vsichkiproizv = [];
+for (var i in proizvavtori) {
+  vsichkiproizv = vsichkiproizv.concat(proizvavtori[i]);
+}
+var vsichkigeroi = [];
+for (var i in proizvgeroi) {
+  vsichkigeroi = vsichkigeroi.concat(proizvgeroi[i]);
+}
 //time to get dirty
-var rightanswer,quest,n,randi,str1="yeah",str2,goodid,tuktursi=[],cs=0,pb=0,clicked,choice;
-
-
-function poznaiavtorproizv(){
-  quest=vsichkiproizv[Math.floor(Math.random()*vsichkiproizv.length)];
-  for(var t in proizvavtori){
-    if (proizvavtori[t].indexOf(quest)!=-1){
-      rightanswer=t;
+var rightanswer,
+  quest,
+  n,
+  randi,
+  str1 = "yeah",
+  str2,
+  goodid,
+  tuktursi = [],
+  cs = 0,
+  pb = 0,
+  clicked,
+  choice;
+function poznaiavtorproizv() {
+  quest = vsichkiproizv[Math.floor(Math.random() * vsichkiproizv.length)];
+  for (var t in proizvavtori) {
+    if (proizvavtori[t].indexOf(quest) != -1) {
+      rightanswer = t;
     }
   }
-  document.getElementById("question").innerHTML='Кой написва "'+ quest+'"?';
- tuktursi=vsichkiavtori.slice()
-    tuktursi.splice(vsichkiavtori.indexOf(rightanswer),1);
+  document.getElementById("question").innerHTML =
+    'Кой написва "' + quest + '"?';
+  tuktursi = vsichkiavtori.slice();
+  tuktursi.splice(vsichkiavtori.indexOf(rightanswer), 1);
 }
-
-function poznaiproizvgeroi(){
-	quest=vsichkigeroi[Math.floor(Math.random()*vsichkigeroi.length)]
-  for(var t in proizvgeroi){
-  if (proizvgeroi[t].indexOf(quest)!=-1){
-      rightanswer=t;
+function poznaiproizvgeroi() {
+  quest = vsichkigeroi[Math.floor(Math.random() * vsichkigeroi.length)];
+  for (var t in proizvgeroi) {
+    if (proizvgeroi[t].indexOf(quest) != -1) {
+      rightanswer = t;
     }
   }
-  document.getElementById("question").innerHTML="Откъде е "+ quest+"?";
-  tuktursi=vsichkiproizv.slice()
-    tuktursi.splice(vsichkiproizv.indexOf(rightanswer),1);
+  document.getElementById("question").innerHTML = "Откъде е " + quest + "?";
+  tuktursi = vsichkiproizv.slice();
+  tuktursi.splice(vsichkiproizv.indexOf(rightanswer), 1);
 }
-
-function poznaiavtorgeroi(){
-	quest=vsichkigeroi[Math.floor(Math.random()*vsichkigeroi.length)]
-  for(var t in proizvgeroi){
-  if (proizvgeroi[t].indexOf(quest)!=-1){
-      var rightanswer1=t;
+function poznaiavtorgeroi() {
+  quest = vsichkigeroi[Math.floor(Math.random() * vsichkigeroi.length)];
+  for (var t in proizvgeroi) {
+    if (proizvgeroi[t].indexOf(quest) != -1) {
+      var rightanswer1 = t;
     }
-    for(var t in proizvavtori){
-    if (proizvavtori[t].indexOf(rightanswer1)!=-1){
-      rightanswer=t;
+    for (var t in proizvavtori) {
+      if (proizvavtori[t].indexOf(rightanswer1) != -1) {
+        rightanswer = t;
+      }
     }
   }
+  document.getElementById("question").innerHTML = "Чий герой е " + quest + "?";
+  tuktursi = vsichkiavtori.slice();
+  tuktursi.splice(vsichkiavtori.indexOf(rightanswer), 1);
 }
-  document.getElementById("question").innerHTML="Чий герой е "+ quest+"?";
-  tuktursi=vsichkiavtori.slice()
-    tuktursi.splice(vsichkiavtori.indexOf(rightanswer),1);
-}
-
-function start(n){
-  if (n==1){
+function start(n) {
+  if (n == 1) {
     poznaiavtorproizv();
-    
-    
   }
-  if (n==2){
+  if (n == 2) {
     poznaiproizvgeroi();
-    
   }
-  if (n==3){
+  if (n == 3) {
     poznaiavtorgeroi();
-    
   }
-  
-  randi=Math.floor(Math.random()*4+1);
-  str2=String(randi);
-  goodid=str1.concat(str2);
-  
-  document.getElementById(goodid).innerHTML=rightanswer;
-  
-  for(var i=1;i<5;i++){
-    if (i!=randi){
-     choice= tuktursi[Math.floor(Math.random()*tuktursi.length)];
-tuktursi.splice(tuktursi.indexOf(choice),1);
-     document.getElementById("yeah"+String(i)).innerHTML=choice;
+
+  randi = Math.floor(Math.random() * 4 + 1);
+  str2 = String(randi);
+  goodid = str1.concat(str2);
+
+  document.getElementById(goodid).innerHTML = rightanswer;
+
+  for (var i = 1; i < 5; i++) {
+    if (i != randi) {
+      choice = tuktursi[Math.floor(Math.random() * tuktursi.length)];
+      tuktursi.splice(tuktursi.indexOf(choice), 1);
+      document.getElementById("yeah" + String(i)).innerHTML = choice;
     }
   }
-  tuktursi=[]
-  choice=""
+  tuktursi = [];
+  choice = "";
 }
 
-function klik(clicked){
-  if (document.getElementById("yeah"+clicked).innerHTML==rightanswer){
-    cs+=1
-    if (cs>pb){
-      pb+=1;
-    }}
- else{
-    cs=0;
-      document.getElementById("errorms").innerHTML="document.getElementById("errorms").innerHTML="<span>Грешка! <br> Отговорът е </span><br><span style='font-size:1.3em'><b>" +rightanswer +"</b></span" ;
-//   $("#errorms").fadeToggle(100);
-//   setTimeout(function(){$("#errorms").fadeToggle(300);},750);
-	 $("#errorms").show("slow");
-	 setTimeout(function(){$("#errorms").hide("slow");},1000);
+function klik(clicked) {
+  if (document.getElementById("yeah" + clicked).innerHTML == rightanswer) {
+    cs += 1;
+    if (cs > pb) {
+      pb += 1;
+    }
+  } 
+  else {
+    var hiscore1 = parseInt(JSON.parse(localStorage.getItem("1"))[1]);
+    var hiscore2 = parseInt(JSON.parse(localStorage.getItem("2"))[1]);
+    var hiscore3 = parseInt(JSON.parse(localStorage.getItem("3"))[1]);
    
-   
+    
+    if (cs >= hiscore1) {
+      localStorage.setItem(
+        "3",
+        JSON.stringify(
+          [JSON.parse(localStorage.getItem("2"))[0],
+          JSON.parse(localStorage.getItem("2"))[1]]
+        )
+      );
+      localStorage.setItem(
+        "2",
+        JSON.stringify(
+          [JSON.parse(localStorage.getItem("1"))[0],
+          JSON.parse(localStorage.getItem("1"))[1]]
+        )
+      );
+      localStorage.setItem(
+        "1",
+        JSON.stringify([window.prompt("What is your name?"), cs])
+      );
+    }
+    
+    else if (cs >= hiscore2) {
+      localStorage.setItem(
+        "3",
+        JSON.stringify(
+          [JSON.parse(localStorage.getItem("2"))[0],
+          JSON.parse(localStorage.getItem("2"))[1]]
+        )
+      );
+      localStorage.setItem(
+        "2",
+        JSON.stringify([window.prompt("What is your name?"), cs])
+      );
+    }
+    
+    else if (cs >= hiscore3) {
+      localStorage.setItem(
+        "3",
+        JSON.stringify([window.prompt("What is your name?"), cs])
+      );
+    }
+
+ 
+  fillcard(cs);
+  cs = 0;
+  document.getElementById("errorms").innerHTML =
+    "<span>Грешка! <br> Отговорът е </span><br><span style='font-size:1.3em'><b>" +
+    rightanswer +
+    "</b></span";
+  //   $("#errorms").fadeToggle(100);
+  //   setTimeout(function(){$("#errorms").fadeToggle(300);},750);
+  $("#errorms").show();
+  setTimeout(function() {
+    $("#errorms").hide();
+  }, 1500);
+
+  setTimeout(function() {
+    $("#endgame").show();
+  }, 1500);
+  setTimeout(function() {
+    $("#endgame").hide();
+  }, 5000);
+
+  document.getElementById("cstracker").innerHTML = "Score: <b>" + cs + "</b>";
+  document.getElementById("pbtracker").innerHTML = "Best: <b>" + pb + "</b>";
+  localStorage.setItem("pb", pb);
   }
-  document.getElementById("cstracker").innerHTML="Score: <b>"+ cs+"</b>";
-  document.getElementById("pbtracker").innerHTML="Best: <b>"+ pb+"</b>";
-
-  localStorage.setItem("pb",pb)
-
-  setTimeout(function(){start(Math.floor(Math.random()*3+1))},30)
-  document.getElementById("cstracker").innerHTML="Score: <b>"+ cs+"</b>";
-  document.getElementById("pbtracker").innerHTML="Best: <b>"+ pb+"</b>";
-
-  }
-
-if (localStorage.getItem("pb")){
-	pb=parseInt(localStorage.getItem("pb"))
+  setTimeout(function() {
+    start(Math.floor(Math.random() * 3 + 1));
+  }, 30);
+  document.getElementById("cstracker").innerHTML = "Score: <b>" + cs + "</b>";
+  document.getElementById("pbtracker").innerHTML = "Best: <b>" + pb + "</b>";
 }
-	
-  document.getElementById("cstracker").innerHTML="Score: <b>"+ cs+"</b>";
-  document.getElementById("pbtracker").innerHTML="Best: <b>"+ pb+"</b>";
 
+  
+  if (localStorage.getItem("pb")) {
+  pb = parseInt(localStorage.getItem("pb"));
+}
+
+else{
+
+
+pb=0;
+localStorage.setItem("1", JSON.stringify(["", 0]));
+localStorage.setItem("2", JSON.stringify(["", 0]));
+localStorage.setItem("3", JSON.stringify(["", 0]));
+  
+}
+
+document.getElementById("cstracker").innerHTML = "Score: <b>" + cs + "</b>";
+document.getElementById("pbtracker").innerHTML = "Best: <b>" + pb + "</b>";
 $("#errorms").hide();
+$("#endgame").hide();
+start(Math.floor(Math.random() * 3 + 1));
 
-start(Math.floor(Math.random()*3+1));
+function fillcard(combo) {
+  document.getElementById("score").innerText = combo;
+  document.getElementById("hisc1").innerText = JSON.parse(
+    localStorage.getItem("1")
+  )[1];
+
+  document.getElementById("hisc2").innerText = JSON.parse(
+    localStorage.getItem("2")
+  )[1];
+  document.getElementById("hisc3").innerText = JSON.parse(
+    localStorage.getItem("3")
+  )[1];
+  document.getElementById("step1").innerText = JSON.parse(
+    localStorage.getItem("1")
+  )[0];
+  document.getElementById("step2").innerText = JSON.parse(
+    localStorage.getItem("2")
+  )[0];
+  document.getElementById("step3").innerText = JSON.parse(
+    localStorage.getItem("3")
+  )[0];
+};
+
     
 </script>
 </body>
