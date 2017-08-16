@@ -253,7 +253,7 @@ ul li div {
   left:20px;
   right:20px;
   text-align:center;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
   background-color: #964B00;
   border:7px solid #663300;
   box-shadow:2px 2px 2px rgba(0,0,0,0.5);
@@ -292,7 +292,7 @@ ul li div {
                 <div id="step1">Bistra</div>
                    </div>
               <div id=bronze><div class="hisc" id="hisc3" style="font-size:1.3em">54</div><div id="step3">Vladimira</div></div>
-            <div id="hof">HALL OF FAME</div>
+            <div id="hof">ЗАЛА НА СЛАВАТА</div>
    
 
             </div>
@@ -314,7 +314,9 @@ ul li div {
 </div>
 </div>
 </div>
-<script>var proizvgeroi = {
+<script>
+	
+	var proizvgeroi = {
   Чичовци: ["Иван Селамсъзът", "Варлаам Копринарката"],
   "Под игото": [
     "Бойчо Огнянов",
@@ -570,13 +572,10 @@ function start(n) {
   if (n == 3) {
     poznaiavtorgeroi();
   }
-
   randi = Math.floor(Math.random() * 4 + 1);
   str2 = String(randi);
   goodid = str1.concat(str2);
-
   document.getElementById(goodid).innerHTML = rightanswer;
-
   for (var i = 1; i < 5; i++) {
     if (i != randi) {
       choice = tuktursi[Math.floor(Math.random() * tuktursi.length)];
@@ -587,7 +586,6 @@ function start(n) {
   tuktursi = [];
   choice = "";
 }
-
 function klik(clicked) {
   if (document.getElementById("yeah" + clicked).innerHTML == rightanswer) {
     cs += 1;
@@ -596,12 +594,23 @@ function klik(clicked) {
     }
   } 
   else {
-    var hiscore1 = parseInt(JSON.parse(localStorage.getItem("1"))[1]);
+    
+var hiscore1 = parseInt(JSON.parse(localStorage.getItem("1"))[1]);
     var hiscore2 = parseInt(JSON.parse(localStorage.getItem("2"))[1]);
     var hiscore3 = parseInt(JSON.parse(localStorage.getItem("3"))[1]);
-   
     
-    if (cs >= hiscore1) {
+      document.getElementById("showhim").innerText = rightanswer;
+  //   setTimeout(function(){$("#errorms").fadeToggle(300);},750);
+ 
+
+     $("#errorms").show();
+   setTimeout(function(){$("#errorms").innerHTML="";},500);
+  setTimeout(function() {
+    $("#errorms").hide();
+        if (cs>=hiscore3){
+      var name1=window.prompt("Highscore! Enter name:");
+              if (cs >= hiscore1) {
+
       localStorage.setItem(
         "3",
         JSON.stringify(
@@ -618,7 +627,7 @@ function klik(clicked) {
       );
       localStorage.setItem(
         "1",
-        JSON.stringify([window.prompt("What is your name?"), cs])
+        JSON.stringify([name1, cs])
       );
     }
     
@@ -632,38 +641,30 @@ function klik(clicked) {
       );
       localStorage.setItem(
         "2",
-        JSON.stringify([window.prompt("What is your name?"), cs])
+        JSON.stringify([name1, cs])
       );
     }
     
     else if (cs >= hiscore3) {
       localStorage.setItem(
         "3",
-        JSON.stringify([window.prompt("What is your name?"), cs])
+        JSON.stringify([name1, cs])
       );
     }
-
- 
+        }
   fillcard(cs);
   cs = 0;
-  document.getElementById("errorms").innerHTML =
-    "<span>Грешка! <br> Отговорът е </span><br><span style='font-size:1.3em'><b>" +
-    rightanswer +
-    "</b></span";
-  //   $("#errorms").fadeToggle(100);
-  //   setTimeout(function(){$("#errorms").fadeToggle(300);},750);
-  $("#errorms").show();
-  setTimeout(function() {
-    $("#errorms").hide();
-  }, 1500);
-
-  setTimeout(function() {
-    $("#endgame").show();
-  }, 1500);
-  setTimeout(function() {
+$("#endgame").show();
+          setTimeout(function(){
+            
+          })
+              setTimeout(function() {
     $("#endgame").hide();
   }, 5000);
+        }, 1500);
 
+
+  
   document.getElementById("cstracker").innerHTML = "Score: <b>" + cs + "</b>";
   document.getElementById("pbtracker").innerHTML = "Best: <b>" + pb + "</b>";
   localStorage.setItem("pb", pb);
@@ -674,34 +675,27 @@ function klik(clicked) {
   document.getElementById("cstracker").innerHTML = "Score: <b>" + cs + "</b>";
   document.getElementById("pbtracker").innerHTML = "Best: <b>" + pb + "</b>";
 }
-
   
   if (localStorage.getItem("pb")) {
   pb = parseInt(localStorage.getItem("pb"));
 }
-
 else{
-
-
 pb=0;
 localStorage.setItem("1", JSON.stringify(["", 0]));
 localStorage.setItem("2", JSON.stringify(["", 0]));
 localStorage.setItem("3", JSON.stringify(["", 0]));
   
 }
-
 document.getElementById("cstracker").innerHTML = "Score: <b>" + cs + "</b>";
 document.getElementById("pbtracker").innerHTML = "Best: <b>" + pb + "</b>";
 $("#errorms").hide();
 $("#endgame").hide();
 start(Math.floor(Math.random() * 3 + 1));
-
 function fillcard(combo) {
   document.getElementById("score").innerText = combo;
   document.getElementById("hisc1").innerText = JSON.parse(
     localStorage.getItem("1")
   )[1];
-
   document.getElementById("hisc2").innerText = JSON.parse(
     localStorage.getItem("2")
   )[1];
@@ -718,7 +712,7 @@ function fillcard(combo) {
     localStorage.getItem("3")
   )[0];
 };
-
+    
     
 </script>
 </body>
