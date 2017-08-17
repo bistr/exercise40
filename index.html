@@ -18,7 +18,7 @@ body {
 
 #errorms{
   position:fixed;
-   background:rgba(0,0,0,0.9);
+   background:rgba(0,0,0,1);
   left:0;
   right:0;
   bottom:0;
@@ -32,8 +32,6 @@ body {
   width:100vw;
   flex-direction:column;
 	}
-
-
 header {
   background-color: #341E8A;
   padding: 30px 10px 45px 30px;
@@ -41,29 +39,23 @@ header {
   font-size: 2em;
   color: white;
   text-shadow: 1px 3px rgba(0,0,0,0.7);
-
 }
-
 .container {
   align-items: center;
   flex-direction: column;
   margin-top: 30px;
 }
-
 .totheleft {
   float: left;
 }
-
 .totheright {
   float: right;
 }
-
 #question {
   font-size: 40px;
  text-align:center;
 margin-bottom:20px;
 }
-
 ul {
   list-style-type: none;
 margin-left:-40px;
@@ -71,10 +63,7 @@ margin-left:-40px;
   bottom:5vh;
   left:0;
   right:1px;
-
-
 }
-
 ul li div {
   margin-bottom:10px;
   text-align:center;
@@ -82,10 +71,7 @@ ul li div {
   font-size:2em;
   text-shadow: 1px 2px rgba(0,0,0,0.5);
   border-radius:3px;
-
-
 }
-
 #yeah1{
     background-color:/*#11bb66; */ #0DAD4B;
   }
@@ -136,14 +122,12 @@ ul li div {
   border-radius:20px;
  
 }
-
 #part1,#part2{
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
 }
-
 #part1{
   border-radius:20px 20px 0 0;
   position:fixed;
@@ -154,11 +138,9 @@ ul li div {
   background-color:#11BB66;
   height:46%;
 }
-
 #score{
   font-size:2em;
 }
-
 #part2{
   background-color:#3377BB;
   position:fixed;
@@ -169,7 +151,6 @@ ul li div {
   height:7%;
   font-size:0.8em;
 }
-
 #part3{
   background-color:#11AABB;
   height:46%;
@@ -183,15 +164,11 @@ ul li div {
   flex-direction:row;
   
 }
-
-
-
 .hisc{
   font-size:1.3em;
   text-shadow:0px 0px 8px rgba(255,255,255,0.5);
   margin-bottom:-1vh;
 }
-
 #step1,#step2,#step3{
   margin:5px;
   border-radius:5px;
@@ -200,10 +177,8 @@ ul li div {
   text-align:center;
   vertical-align:middle;
   border-radius:7px 7px 2px 2px;
-
   
 }
-
 #gold,#silver,#bronze{
   display:flex;
   flex-direction:column;
@@ -213,47 +188,39 @@ ul li div {
   bottom:13%;
   text-shadow:1px 1px 3px rgba(0,0,0,0.9);
 }
-
 #gold{
   left:32vw;
   right:32vw;
   
 }
-
 #bronze{
   right:3vw;
 }
-
 #silver{
   left:3vw;
 }
-
 #step1{
   background-color:#D4AF37;
   height:18vh;
   line-height:18vh;
 }
-
 #step2{
   background-color:	#B8C2C2;
   height:13vh;
   line-height:13vh;
 }
-
 #step3{
   background-color:#CD7F32;
   height:8vh;
   line-height:8vh;
-
 }
-
 #hof{
   position:fixed;
   bottom:20px;
   left:20px;
   right:20px;
   text-align:center;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
   background-color: #964B00;
   border:7px solid #663300;
   box-shadow:2px 2px 2px rgba(0,0,0,0.5);
@@ -264,7 +231,9 @@ ul li div {
 
 </style>
 </head>
-<body><div class="container-fluid">
+<body>
+	
+	<div class="container-fluid">
 <header><span class="totheleft" id="cstracker">Score:<b>0</b></span><span class="totheright" id="pbtracker">Best:<b>0</b></span></header>
 
 
@@ -273,7 +242,7 @@ ul li div {
 <div id="question">Кой написва &quot;Под Игото?&quot;</div>
 
 <div id="answerbox">
-<div id="errorms"></div>
+<div id="errorms"><span>Грешка!<br> Отговорът е </span><br><span style='font-size:1.3em' id="showhim"><b></b></span</div></div>
 
         <div id="endgame">
           <div id="part1">
@@ -281,7 +250,7 @@ ul li div {
             <div id="score">64</div>
             <div>points!</div>
           </div>
-          <div id="part2">NEW GAME IN: 3</div>
+          <div id="part2">ИГРАЙ СЛЕД 3..</div>
           <div id="part3">
 
 
@@ -292,7 +261,7 @@ ul li div {
                 <div id="step1">Bistra</div>
                    </div>
               <div id=bronze><div class="hisc" id="hisc3" style="font-size:1.3em">54</div><div id="step3">Vladimira</div></div>
-            <div id="hof">HALL OF FAME</div>
+            <div id="hof">ЗАЛА НА СЛАВАТА</div>
    
 
             </div>
@@ -314,7 +283,10 @@ ul li div {
 </div>
 </div>
 </div>
-<script>var proizvgeroi = {
+	
+<script>
+	
+	var proizvgeroi = {
   Чичовци: ["Иван Селамсъзът", "Варлаам Копринарката"],
   "Под игото": [
     "Бойчо Огнянов",
@@ -323,7 +295,7 @@ ul li div {
     "чорбаджи Марко",
     "Мичо Бейзадето",
     "Кириак Стефчов",
-    "чорбаджи Йордан Диамандиев",
+    "Йордан Диамандиев",
     "Хаджи Ровоама"
   ]
 };
@@ -570,13 +542,10 @@ function start(n) {
   if (n == 3) {
     poznaiavtorgeroi();
   }
-
   randi = Math.floor(Math.random() * 4 + 1);
   str2 = String(randi);
   goodid = str1.concat(str2);
-
   document.getElementById(goodid).innerHTML = rightanswer;
-
   for (var i = 1; i < 5; i++) {
     if (i != randi) {
       choice = tuktursi[Math.floor(Math.random() * tuktursi.length)];
@@ -587,7 +556,6 @@ function start(n) {
   tuktursi = [];
   choice = "";
 }
-
 function klik(clicked) {
   if (document.getElementById("yeah" + clicked).innerHTML == rightanswer) {
     cs += 1;
@@ -596,12 +564,21 @@ function klik(clicked) {
     }
   } 
   else {
-    var hiscore1 = parseInt(JSON.parse(localStorage.getItem("1"))[1]);
+    
+var hiscore1 = parseInt(JSON.parse(localStorage.getItem("1"))[1]);
     var hiscore2 = parseInt(JSON.parse(localStorage.getItem("2"))[1]);
     var hiscore3 = parseInt(JSON.parse(localStorage.getItem("3"))[1]);
-   
     
-    if (cs >= hiscore1) {
+      document.getElementById("showhim").innerText = rightanswer;
+  //   setTimeout(function(){$("#errorms").fadeToggle(300);},750);
+ 
+     $("#errorms").show();
+  setTimeout(function() {
+    $("#errorms").hide();
+        if (cs>=hiscore3){
+      var name1=window.prompt("Highscore! Enter name:");
+              if (cs >= hiscore1) {
+
       localStorage.setItem(
         "3",
         JSON.stringify(
@@ -618,7 +595,7 @@ function klik(clicked) {
       );
       localStorage.setItem(
         "1",
-        JSON.stringify([window.prompt("What is your name?"), cs])
+        JSON.stringify([name1, cs])
       );
     }
     
@@ -632,38 +609,33 @@ function klik(clicked) {
       );
       localStorage.setItem(
         "2",
-        JSON.stringify([window.prompt("What is your name?"), cs])
+        JSON.stringify([name1, cs])
       );
     }
     
     else if (cs >= hiscore3) {
       localStorage.setItem(
         "3",
-        JSON.stringify([window.prompt("What is your name?"), cs])
+        JSON.stringify([name1, cs])
       );
     }
-
- 
+        }
   fillcard(cs);
   cs = 0;
-  document.getElementById("errorms").innerHTML =
-    "<span>Грешка! <br> Отговорът е </span><br><span style='font-size:1.3em'><b>" +
-    rightanswer +
-    "</b></span";
-  //   $("#errorms").fadeToggle(100);
-  //   setTimeout(function(){$("#errorms").fadeToggle(300);},750);
-  $("#errorms").show();
-  setTimeout(function() {
-    $("#errorms").hide();
+$("#errorms").hide(); 
+$("#endgame").show();
+var count=document.getElementById("part2");
+count.innerText="Играй след 5...";
+setTimeout(function(){count.innerText="Играй след 4..."},1000);
+setTimeout(function(){count.innerText="Играй след 3..."},2000);
+setTimeout(function(){count.innerText="Играй след 2..."},3000);
+setTimeout(function(){count.innerText="Играй след 1..."},4000);
+setTimeout(function(){$("#endgame").hide()},5200)
+        
   }, 1500);
 
-  setTimeout(function() {
-    $("#endgame").show();
-  }, 1500);
-  setTimeout(function() {
-    $("#endgame").hide();
-  }, 5000);
 
+  
   document.getElementById("cstracker").innerHTML = "Score: <b>" + cs + "</b>";
   document.getElementById("pbtracker").innerHTML = "Best: <b>" + pb + "</b>";
   localStorage.setItem("pb", pb);
@@ -674,34 +646,27 @@ function klik(clicked) {
   document.getElementById("cstracker").innerHTML = "Score: <b>" + cs + "</b>";
   document.getElementById("pbtracker").innerHTML = "Best: <b>" + pb + "</b>";
 }
-
   
   if (localStorage.getItem("pb")) {
   pb = parseInt(localStorage.getItem("pb"));
 }
-
 else{
-
-
 pb=0;
 localStorage.setItem("1", JSON.stringify(["", 0]));
 localStorage.setItem("2", JSON.stringify(["", 0]));
 localStorage.setItem("3", JSON.stringify(["", 0]));
   
 }
-
 document.getElementById("cstracker").innerHTML = "Score: <b>" + cs + "</b>";
 document.getElementById("pbtracker").innerHTML = "Best: <b>" + pb + "</b>";
 $("#errorms").hide();
 $("#endgame").hide();
 start(Math.floor(Math.random() * 3 + 1));
-
 function fillcard(combo) {
   document.getElementById("score").innerText = combo;
   document.getElementById("hisc1").innerText = JSON.parse(
     localStorage.getItem("1")
   )[1];
-
   document.getElementById("hisc2").innerText = JSON.parse(
     localStorage.getItem("2")
   )[1];
@@ -718,7 +683,7 @@ function fillcard(combo) {
     localStorage.getItem("3")
   )[0];
 };
-
+    
     
 </script>
 </body>
