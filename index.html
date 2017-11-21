@@ -622,7 +622,7 @@ var hiscore1 = parseInt(JSON.parse(localStorage.getItem("1"))[1]);
     }
         }
   fillcard(cs);
-  cs = 0;
+  //cs = 0; ne tuk
 $("#errorms").hide(); 
 $("#endgame").show();
 var count=document.getElementById("part2");
@@ -636,7 +636,7 @@ setTimeout(function(){$("#endgame").hide()},5200)
   }, 1500);
 
 
-  
+  cs = 0; // tuk
   document.getElementById("cstracker").innerHTML = "Score: <b>" + cs + "</b>";
   document.getElementById("pbtracker").innerHTML = "Best: <b>" + pb + "</b>";
   localStorage.setItem("pb", pb);
