@@ -68,7 +68,10 @@ $(".btn").click(function(){
 	if (name!="" && name.length<13 && (name.split(" ").length - 1)!=name.length)
 		{
 			register(name);
-			//window.location("index.html");
+			setTimeout(function(){
+				window.location.href="index.html";
+			},300)
+			
 		}
 	else
 		{
