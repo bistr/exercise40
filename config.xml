@@ -12,6 +12,7 @@
        <gap:plugin name="cordova-plugin-splashscreen" version="3.1.0" source="npm" />
        <preference name="orientation" value="portrait" />
        <preference name="fullscreen" value="true" />
+       <plugin name="cordova-plugin-whitelist" />
  
     <!-- versionCode is Android only -->
     <!-- version is in major.minor.patch format --> 
@@ -25,10 +26,10 @@
         Bistra Chilikova
     </author>
 
-
-     <icon src="assets/icon.png" />    
-        
-<splash src="assets/splash.png" />
+    <allow-intent href="*" />
+    <access origin="*" />
+    <icon src="assets/icon.png" />    
+    <splash src="assets/splash.png" />
 
 
 
