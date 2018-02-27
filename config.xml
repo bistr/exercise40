@@ -26,9 +26,9 @@
     </author>
 
 
-     <icon src="icon.png" />    
+     <icon src="assets/icon.png" />    
         
-<splash src="splash.png" />
+<splash src="assets/splash.png" />
 
 
 
